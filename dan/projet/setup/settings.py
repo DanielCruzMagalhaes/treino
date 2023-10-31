@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'aplicativo',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,11 +76,14 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'daniel',  # Nome do banco de dados que você criou no MySQL Workbench.
+        'USER': 'root',  # Nome de usuário do MySQL.
+        'PASSWORD': '',  # Senha do MySQL.
+        'HOST': 'localhost',  # Endereço do servidor do MySQL (normalmente 'localhost').
+        'PORT': '3306',  # Porta do MySQL (normalmente '3306').
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
